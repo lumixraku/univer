@@ -172,7 +172,7 @@ export class SpreadsheetSkeleton extends SheetSkeleton {
         super(worksheet, _styles, _localeService, _contextService, _configService, _injector);
     }
 
-    override init() {
+    override initConfig() {
         this._updateLayout();
         this.disposeWithMe(
             this._contextService.subscribeContextValue$(RENDER_RAW_FORMULA_KEY).pipe(
